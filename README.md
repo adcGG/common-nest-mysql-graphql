@@ -14,7 +14,6 @@ pnpm i class-validator typeorm @nestjs/typeorm mysql2 -S
 ## 数据库实体
 
 ```ts
-
 import { IsNotEmpty } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
@@ -41,8 +40,6 @@ export class Example {
   })
   tel: string;
 }
-
-
 ```
 
 ## 导出
@@ -61,17 +58,13 @@ import { Example } from './models/example.entity';
   exports: [],
 })
 export class ExampleModule {}
-
 ```
-
-
 
 ## 数据库配置
 
 app.module.ts 文件
 
 ```ts
-
 export const typeOrmConfig: TypeOrmModuleOptions = {
   type: 'mysql',
   host: 'localhost',
@@ -101,8 +94,6 @@ export class AppModule {}
 https://typeorm.bootcss.com/repository-api
 
 example.service.ts
-
-
 
 ```ts
 import { Injectable } from '@nestjs/common';
@@ -149,11 +140,7 @@ export class ExampleService {
     return res;
   }
 }
-
-
 ```
-
-
 
 # 安装 Graphql
 
@@ -264,15 +251,9 @@ export class UserInput {
 最后
 ```
 
-
-
  最后记得module文件里面注册下
 
 providers: [ ExampleResolver],
-
-
-
-
 
 ## 调试
 
@@ -300,14 +281,6 @@ mutation create($params:ExampleInput!) {
   }
 }
 ```
-
-
-
-
-
-
-
-
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
